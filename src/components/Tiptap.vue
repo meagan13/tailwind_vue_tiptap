@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="p-3 h-screen">
         <div v-if="editor">
             <button class="btn" @click="editor.chain().focus().toggleBold().run()" :class="{ 'is-active': editor.isActive('bold') }">
                 bold
@@ -86,11 +86,11 @@
             </button>
         </div>
 
-        <div>
-            <editor-content class="bg-green-100" :editor="editor" />
+        <div class="p-3 mt-2 h-24 bg-green-100">
+            <editor-content :editor="editor" />
         </div>
 
-        <div class="w-100 bg-pink-800 text-white">
+        <div class="p-3 mt-2 bg-pink-800 text-white">
             <h4 class="text-center py-5">Meagan Test</h4>
         </div>
     </div>
@@ -107,7 +107,7 @@ export default {
 
   setup() {
     const editor = useEditor({
-      content: '<p>I’m running tiptap with Vue.js. 🎉</p>',
+      content: '<p>Begin typing here!</p>',
       extensions: [
         StarterKit,
       ],
