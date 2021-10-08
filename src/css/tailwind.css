@@ -3,3 +3,9 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply transition transform hover:translate-y-0.5 border-2 m-1 px-4 py-2 inline-block rounded-lg focus:ring focus:ring-offset-1 uppercase tracking-wider font-semibold text-sm bg-indigo-300
+    }
+}
