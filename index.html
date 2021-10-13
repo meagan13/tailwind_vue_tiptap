@@ -8,10 +8,18 @@
     <title>Text Editor</title>
     <link href="/css/tailwind.css" rel="stylesheet" />
     <script type="text/javascript" src="js/vue-router.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/vue-router@4"></script>
+
   </head>
 
   <body class="bg-gray-100">
-    <div id="app"></div>
+    <div id="app">
+      <router-link to='/'>Go to Home</router-link>
+      <router-link to='/about'>Go to About</router-link>
+      <router-link to='/editor'>Go to Editor</router-link>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 
