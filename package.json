@@ -7,13 +7,18 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@tiptap/starter-kit": "^2.0.0-beta.119",
+    "@tiptap/extension-bullet-list": "^2.0.0-beta.16",
+    "@tiptap/extension-list-item": "^2.0.0-beta.14",
+    "@tiptap/starter-kit": "^2.0.0-beta.121",
     "@tiptap/vue-3": "^2.0.0-beta.68",
     "tailwindcss": "^2.2.16",
-    "vue": "^3.2.16"
+    "tiptap": "^1.32.2",
+    "vue": "^3.2.16",
+    "vue-router": "^3.5.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
+    "jest": "^27.2.5",
     "vite": "^2.6.4"
   }
 }

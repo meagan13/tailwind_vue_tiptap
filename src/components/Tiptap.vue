@@ -1,5 +1,5 @@
 <template>
-    <div class="p-3 h-screen">
+    <div class="p-3 h-screen editor">
         <div v-if="editor">
             <button class="btn" @click="editor.chain().focus().toggleBold().run()" :class="{ 'is-active': editor.isActive('bold') }">
                 bold
@@ -86,8 +86,13 @@
             </button>
         </div>
 
-        <div class="p-3 mt-2 h-24 bg-green-100">
+        <div class="p-3 mt-2 h-24 bg-green-100 text-gray-600 italic">
             <editor-content :editor="editor" />
+            <input
+                name="test_input"
+                type="text-area"
+                class="text-gray-400 italic w-full mt-3"
+            />
         </div>
 
         <div class="p-3 mt-2 bg-pink-800 text-white">
@@ -97,12 +102,22 @@
 </template>
 
 <script>
-import { useEditor, EditorContent } from '@tiptap/vue-3'
+import { useEditor, EditorContent, Editor } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
+// import BulletList from '@tiptap/extension-bullet-list'
 
 export default {
+  name: 'editor',
+  
   components: {
     EditorContent,
+  },
+
+  data() {
+
+    return {
+      editor: null,
+    }
   },
 
   setup() {
@@ -113,6 +128,7 @@ export default {
       ],
     })
 
+    console.log("editor:", editor)
     return { editor }
   },
 }
